@@ -1,15 +1,13 @@
-package com.example.hello.service;
+package com.hello.service;
 
-import com.example.hello.mapper.UserMapper;
-import com.example.hello.model.UserExample;
+import com.hello.mapper.UserMapper;
+import com.hello.model.UserExample;
 import org.apache.dubbo.config.annotation.DubboService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
 /**
  * @author smile
  */
-@Service
 @DubboService
 public class UserServiceImpl implements UserService {
     @Autowired

@@ -1,0 +1,36 @@
+plugins {
+    id 'org.springframework.boot' version '2.6.5'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+    id 'java'
+}
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+repositories {
+    maven {
+        url "http://maven.aliyun.com/nexus/content/groups/public"
+    }
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.2.2'
+    implementation 'org.apache.dubbo:dubbo-spring-boot-starter:2.7.15'
+    implementation 'com.github.pagehelper:pagehelper-spring-boot-starter:1.4.1'
+    implementation 'org.springframework.boot:spring-boot-starter-aop:2.6.6'
+    implementation 'mysql:mysql-connector-java:8.0.28'
+    implementation 'org.redisson:redisson:3.17.0'
+    implementation 'org.apache.curator:curator-recipes:5.2.0'
+    implementation 'org.apache.curator:curator-framework:5.2.0'
+    implementation 'com.alibaba.csp:sentinel-core:1.8.4'
+
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}

@@ -1,6 +1,6 @@
-package com.example.hello.controller;
+package com.hello.controller;
 
-import com.example.hello.service.UserService;
+import com.hello.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

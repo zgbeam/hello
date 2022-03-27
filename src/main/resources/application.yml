@@ -1,4 +1,6 @@
 spring:
+  main:
+    allow-circular-references: true
   datasource:
     url: jdbc:mysql://localhost:3306/hello?useUnicode=true&characterEncoding=UTF-8
     username: root
@@ -7,7 +9,7 @@ spring:
 
 mybatis:
   mapper-locations: classpath:mapper/*
-  type-aliases-package: com.example.hello.mapper
+  type-aliases-package: com.hello.mapper
   configuration:
     map-underscore-to-camel-case: true
 
@@ -15,9 +17,10 @@ dubbo:
   application:
     name: hello-dubbo-provider
   scan:
-    base-packages: com.example.hello.service
+    base-packages: com.hello.service
   registry:
     address: N/A
   protocol:
     name: dubbo
     port: 12345
+    telnet: ls,ps,cd,pwd,trace,count,invoke,select,status,log,help,clear,exit,shutdown

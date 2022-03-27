@@ -1,4 +1,4 @@
-package com.example.hello.service;
+package com.hello.service;
 
 /**
  * @author smile
