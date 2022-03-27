@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/hello?useUnicode=true&characterEncoding=UTF-8
+    username: root
+    password: qwerty123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+mybatis:
+  mapper-locations: classpath:mapper/*
+  type-aliases-package: com.example.hello.mapper
+  configuration:
+    map-underscore-to-camel-case: true
+
+dubbo:
+  application:
+    name: hello-dubbo-provider
+  scan:
+    base-packages: com.example.hello.service
+  registry:
+    address: N/A
+  protocol:
+    name: dubbo
+    port: 12345
